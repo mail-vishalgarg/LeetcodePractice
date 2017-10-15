@@ -1,3 +1,5 @@
+package String;
+
 
 public class CheckIntegerPower {
 	public static boolean isValidPower(int num, int target) {
