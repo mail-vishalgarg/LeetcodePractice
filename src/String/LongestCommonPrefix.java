@@ -4,8 +4,6 @@ package String;
  * Write a function to find the longest common prefix string amongst an array of strings.
  */
 
-package leetcode;
-
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;

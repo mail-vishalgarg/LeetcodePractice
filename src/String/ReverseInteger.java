@@ -20,14 +20,7 @@
 * For the purpose of this problem, assume that your function returns 0 
 * when the reversed integer overflows.
 */
-package src.String;
-
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
+package String;
 
 public class ReverseInteger {
 	public static int reverse_1(int x) {
@@ -35,21 +28,28 @@ public class ReverseInteger {
 
 		while (x != 0) {
 			int tail = x % 10;
-			int temp = ret * 10 + tail;
-			if ((temp - tail) / 10 != ret)
-				return 0;
+			System.out.println("Tail: "+tail);
+			//int temp = ret * 10 + tail;
+			
+			/*if ((temp - tail) / 10 != ret)
+				return 0;*/
 
-			ret = temp;
+			ret = ret * 10 + tail;
+			System.out.println("RET: " + ret);
 			x = x / 10;
+			System.out.println("X:" +x);
 		}
 		return ret;
 	}
 
-	public static int reverse(int n) {
+	/*public static int reverse(int n) {
 		return reverse_1(n);
-	}
+	}*/
 
-	@Test
+	public static void main(String[] args) {
+		System.out.println(reverse_1(123));
+	}
+	/*@Test
 	public void test() {
 		assertTrue("Test1", reverse(123) == 321);
 		assertTrue("Test2", reverse(-1234) == -4321);
@@ -63,5 +63,5 @@ public class ReverseInteger {
 		for (Failure failure : result.getFailures()) {
 			System.out.println("Failed Test cases" + failure.toString());
 		}
-	}
+	}*/
 }
