@@ -37,11 +37,33 @@ public class SqrtNumber {
 		}
 		return ans;
 	}
+
+	/*Here is the equation you need.
+
+	sqrt(n+1) = (sqrt(n) + num/sqrt(n) )/2
+
+	The first sqrt number should be the input number / 2.
+
+	Using the equation, we can come up with a Java Square Root method by ourselves.*/
+	public static double sqrt(int number){
+		double t;
+		 
+		double squareRoot = number / 2;
+	 
+		do {
+			t = squareRoot;
+			squareRoot = (t + (number / t)) / 2;
+		} while ((t - squareRoot) != 0);
+	 
+		return squareRoot;
+	}
 	
 	public static void main(String[] args) {
 		int number = 8;
+		System.out.println(sqrt(2));
 		System.out.println(mySqrt(number) + "\n");
 		System.out.println(mysqrt_1(number));
+		System.out.println(sqrt(2));
 		
 	}
 }
