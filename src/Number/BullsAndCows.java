@@ -61,10 +61,30 @@ public class BullsAndCows {
 		return bulls + "A" + cows + "B";
 	}
 	
+	public static String getHint_2(String secret, String guess){
+		int bulls = 0;
+		int cows = 0;
+		//int[] numbers = new int[10];
+		
+		for(int i=0; i < secret.length();i++){
+			int s = Character.getNumericValue(secret.charAt(i));
+			int g = Character.getNumericValue(guess.charAt(i));
+			if (s == g){
+				bulls++;
+			} else {
+				cows++;
+			}
+		}
+		return bulls + "A" + cows + "B";
+	}
+	
 	public static void main(String[] args) {
 		String secret = "1132";
 		String guess =  "3112";
 		System.out.println(getHint(secret, guess));
+		
+		System.out.println("--------------------------");
+		System.out.println(getHint_2(secret,guess));
 	}
 	
 }

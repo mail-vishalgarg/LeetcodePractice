@@ -1,6 +1,19 @@
 package Number;
 
 public class SqrtNumber {
+	
+	/*
+	 * Integer Newton Method
+	 */
+	
+	public static double mySqrt_1(int x){
+		double r = x;
+		while(r * r > x){
+			r = (r + x/r)/2;
+		}
+		return r;
+	}
+	
 	public static int mySqrt(int n){
 		if (n == 0 || n == 1){
 			return n;
@@ -64,6 +77,8 @@ public class SqrtNumber {
 		System.out.println(mySqrt(number) + "\n");
 		System.out.println(mysqrt_1(number));
 		System.out.println(sqrt(2));
+		System.out.println("----------------------");
+		System.out.println(mySqrt_1(2));
 		
 	}
 }

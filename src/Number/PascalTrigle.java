@@ -66,6 +66,6 @@ public class PascalTrigle {
 		System.out.println(generatePascalTringale(5));
 		int[] result = generatePascalRows(3);
 		for (int i : result)
-			System.out.print(i + " ");
+			System.out.print(i + "\n");
 	}
 }

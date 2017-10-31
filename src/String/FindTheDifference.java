@@ -30,9 +30,11 @@ public class FindTheDifference {
 	public static char findTheDiff(String s, String t) {
 		int freq[] = new int[26];
 		
-		for (int i = 0; i<s.length();i++) {
-			freq[s.charAt(i)]++;
-			freq[t.charAt(i)]--;
+		for (int i = 0; i<t.length();i++) {
+			freq[(int)(t.charAt(i) - 'a')]++;
+			if (i < s.length()){
+				freq[(int)(s.charAt(i) - 'a')]--;
+			}
 		}
 		
 		for (int i = 0 ;i<t.length();i++) {
@@ -69,7 +71,8 @@ public static void findTheDiff_2() throws UnsupportedEncodingException {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		String s = "abcd";
 		String t = "abcde";
-		findTheDiff_2();
+		System.out.println(findTheDiff(s,t));
+		//findTheDiff_2();
 	} 
 	
 }

@@ -35,8 +35,9 @@ public class NonRepeatedInteger {
 	}
 	
 	public static void main(String[] args) {
-		int[] num = {1,1,2,2,3,4};
-		//nonRepeatedInt(num);
+		int[] num = {1,2,2,2,3,4};
+		nonRepeatedInt(num);
+		System.out.println("----------");
 		nonRepeatedUniqInt(num);
 	}
 }

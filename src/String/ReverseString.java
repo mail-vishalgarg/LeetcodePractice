@@ -11,7 +11,7 @@ public class ReverseString {
 		
 		String leftStr = s.substring(0, len / 2);
 		String rightStr = s.substring(len / 2,len);
-		return reverseString_1(leftStr) + reverseString_1(rightStr);
+		return reverseString_1(rightStr) + reverseString_1(leftStr);
 		
 	}
 	
@@ -26,10 +26,21 @@ public class ReverseString {
 		return String.valueOf(ca);
 	}
 	
+	public static String reverseString_iterative2(String s) {
+		StringBuilder sb = new StringBuilder();
+		for (int i=s.length() -1; i>=0; i--){
+			sb.append(s.charAt(i));
+		}
+		System.out.println(sb.toString());
+		return sb.toString();
+	}
+	
 	@Test
 	public void test() {
 		//Assert.assertTrue(reverseString_1("vishal").compareTo("lahsiv") == 0);
 		Assert.assertTrue(reverseString_iterative("vishal").compareTo("lahsiv") == 0);
+		Assert.assertTrue(reverseString_iterative2("vvishal").compareTo("lahsivv") == 0);
+		
 	}
 	
 
