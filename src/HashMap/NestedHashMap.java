@@ -11,7 +11,6 @@ public class NestedHashMap {
 	
 	public static void main(String[] args){
 		DataStructure = new HashMap();
-		
 		HashMap hm = new HashMap();
 		hm.put("title", "Google");
 		hm.put("link" , "http://www.google.com");
