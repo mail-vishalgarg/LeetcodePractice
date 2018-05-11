@@ -9,6 +9,8 @@ package String;
  */
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 
 public class LongestSubstrWithoutRepeatChars {
 
@@ -35,13 +37,61 @@ public class LongestSubstrWithoutRepeatChars {
 			//  -  curr maxLength
 			//  -  currIndex minus currStrStartIndex and one
 			
-			maxLen = Math.max(maxLen, i - currStrStartIndex + 1);
+			maxLen = Math.max(maxLen, i +1 - currStrStartIndex);
 			System.out.println("Max Len: " + maxLen);
 		}
 		return maxLen;
 	}
 
+	public static void lengthOfLongestSubstring_2(String s){
+		char[] charArray = s.toCharArray();
+		
+		//Intialization
+		String longestSubstring = null;
+		int longestSubstringLength = 0;
+		//Creating LinkedHashMap with Characters as keys 
+		//and position as values
+		LinkedHashMap<Character,Integer> charPosMap = new LinkedHashMap<Character,Integer>();
+		for(int i=0; i< charArray.length;i++){
+			char ch = charArray[i];
+			if (!charPosMap.containsKey(ch)){
+				charPosMap.put(ch, i);
+			} else{
+				i = charPosMap.get(ch);
+				charPosMap.clear();
+			}
+			if (charPosMap.size() > longestSubstringLength){
+				longestSubstringLength = charPosMap.size();
+				longestSubstring = charPosMap.keySet().toString();
+			}
+		}
+		System.out.println("Input String:" + s);
+		System.out.println("Longest Substring:" + longestSubstring);
+		System.out.println("Longest Substring lenght: "+ longestSubstringLength);
+	}
+	// Below method seems best for this solution.
+	public static int lengthofLongestSubstring_3(String s){
+		int maxLength = 0;
+		int i =0, j = 0;
+		HashSet<Character> set = new HashSet<>();
+		
+		while (j < s.length()){
+			if (!set.contains(s.charAt(j))){
+				set.add(s.charAt(j));
+				j++;
+				maxLength = Math.max(maxLength, j-i);
+			} else {
+				set.remove(s.charAt(i));
+				i++;
+			}
+		}
+		return maxLength;
+	}
+	
 	public static void main(String[] args) {
+		lengthOfLongestSubstring_2("vishalishal");
+		
+		System.out.println("-----------------------");
 		System.out.println(lengthOfLongestSubstring("dvdf"));
 		System.out.println(lengthOfLongestSubstring("vishal"));
 		System.out.println(lengthOfLongestSubstring("aab"));
@@ -50,5 +100,11 @@ public class LongestSubstrWithoutRepeatChars {
 		System.out.println(lengthOfLongestSubstring("bbbbbbbbb"));
 		System.out.println(lengthOfLongestSubstring(""));
 		System.out.println(lengthOfLongestSubstring(null));
+		
+		System.out.println("------------------------------------");
+		System.out.println("Third Method output:");
+		System.out.println("------------------------------------");
+		System.out.println(lengthofLongestSubstring_3("abcabcdd"));
+		System.out.println(lengthofLongestSubstring_3("bbbb"));
 	}
 }

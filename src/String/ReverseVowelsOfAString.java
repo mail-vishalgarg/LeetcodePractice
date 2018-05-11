@@ -25,6 +25,7 @@ public class ReverseVowelsOfAString {
 		if (s == null || s.length() == 0)
 			return s;
 		
+		//covert and array to a HashSet by using Arrays.asList(<array Name>)
 		HashSet<Character> vowels = new HashSet<Character>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
 		
 		char[] sa = s.toCharArray();

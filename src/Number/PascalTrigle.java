@@ -42,6 +42,7 @@ public class PascalTrigle {
 		return previous;
 	}
 	
+	//Below method is working
 	public static List<List<Integer>> generatePascalTringale(int row){
 		List<List<Integer>> listoflist = new ArrayList<List<Integer>>();
 		if (row == 0){

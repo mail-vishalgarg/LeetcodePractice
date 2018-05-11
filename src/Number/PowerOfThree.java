@@ -26,7 +26,7 @@ public class PowerOfThree {
 		return ( n == 1);
 	}
 	public static void main(String[] args) {
-		System.out.println(isPowerOfThree(8));
+		System.out.println(isPowerOfThree(9));
 		System.out.println(isPowerOfThree_2(0));
 	}
 }

@@ -31,11 +31,20 @@ public class ProductArray {
 	        /* Construct the left array */
 	        for (i = 1; i < n; i++)
 	            left[i] = arr[i -1] * left[i - 1];
+	        
+	        //Print left array
+	        for (int l=0; l<left.length; l++){
+	        	System.out.println("Left array:" + left[l]);
+	        }
 	 
 	        /* Construct the right array */
 	        for (j = n - 2; j >= 0; j--)
 	            right[j] = arr[j + 1] * right[j + 1];
 	 
+	      //Print right array
+	        for (int r=0; r<left.length; r++){
+	        	System.out.println("Right array:" + right[r]);
+	        }
 	        /* Construct the product array using
 	           left[] and right[] */
 	        for (i = 0; i < n; i++)

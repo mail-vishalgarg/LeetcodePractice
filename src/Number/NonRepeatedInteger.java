@@ -28,7 +28,7 @@ public class NonRepeatedInteger {
 				lui = i+1;
 			} 
 		}
-		for(int i=lui; i<=num.length -1; i++){
+		for(int i=lui; i<=num.length-1; i++){
 			System.out.println(num[i]);
 		}
 		

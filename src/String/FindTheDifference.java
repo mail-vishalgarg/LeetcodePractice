@@ -70,7 +70,7 @@ public static void findTheDiff_2() throws UnsupportedEncodingException {
  
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		String s = "abcd";
-		String t = "abcde";
+		String t = "abecd";
 		System.out.println(findTheDiff(s,t));
 		//findTheDiff_2();
 	} 

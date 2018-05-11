@@ -43,7 +43,7 @@ public class ReverseLinkedList {
 		Node n4 = new Node(4);
 		Node n5 = new Node(5);
 		
-		Node list = new Node(0);
+		//Node list = new Node(0);
 		
 		n1.next = n2;
 		n2.next = n3;

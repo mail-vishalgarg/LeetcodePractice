@@ -10,7 +10,6 @@ public class IntegerIteration {
 			int s = Character.getNumericValue(num.charAt(i)); //using build in function
 			int x = num.charAt(i) - '0'; // without build in function
 			System.out.println("xxx:" + x);
-			System.out.println("SSSSSSS:" +'0');
 			System.out.println(s);
 		}
 	}

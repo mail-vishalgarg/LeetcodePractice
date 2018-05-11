@@ -36,6 +36,7 @@ public class InsertionSort {
 	
 	public static void main(String[] args) {
 		int[] num = {3,2,5,1,9,6};
+		System.out.println("Befor sorting: " + );
 		insertionSort(num);
 		System.out.println(Arrays.toString(num));
 		

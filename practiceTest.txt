@@ -1,0 +1,11 @@
+01/13/2018
+String- 
+	CheckIntegerPower
+    Find the difference of two strings
+    Find uniq char in a string
+    Find first uniq character in the string (This problem is same as above)
+    Implement_strStr
+    LengthOfLastWord
+    isoMorphicString
+    LongestPalindrome
+    LongestRepeatedCharacter

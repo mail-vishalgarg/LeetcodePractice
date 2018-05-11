@@ -46,8 +46,20 @@ public class ReverseInteger {
 		return reverse_1(n);
 	}*/
 
+	//shortest solution for revision
+	public static void reversNumber_2(int x){
+		int rev = 0;
+		while(x != 0){
+			int tail = x % 10;
+			rev = rev * 10 + tail;
+			x = x/10;
+		}
+		System.out.println(rev);
+	}
 	public static void main(String[] args) {
 		System.out.println(reverse_1(123));
+		System.out.println("-----------------------");
+		reversNumber_2(1234);
 	}
 	/*@Test
 	public void test() {

@@ -1,6 +1,13 @@
 package StackQueue;
 
 import java.util.Arrays;
+/*
+ * We can do four operations in Queue;
+ * isEmpty()
+ * enqueue() - to insert an element
+ * dequeue() - to remove an element
+ * front() - return front element of the queue
+ */
 
 public class ArrayImplementationQueue {
 	public static int[] arr = new int[10];
@@ -46,8 +53,11 @@ public class ArrayImplementationQueue {
 		for (int i = 1; i<10; i++){
 			enqueue(i * 10);
 		}
+		System.out.println("FRONT: " + front);
 		System.out.println("After Enqueue:" +Arrays.toString(arr));
+		System.out.println("FRONT: " + front);
 		dequeue();
+		System.out.println("FRONT: " + front);
 		System.out.println("After dequeue:"+Arrays.toString(arr));
 		System.out.println("is it Empty:" + isEmpty());
 		System.out.println("Front:" + front);

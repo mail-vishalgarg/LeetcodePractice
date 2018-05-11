@@ -43,12 +43,16 @@ public class RotateArray {
 		}
 		//step each time to move
 		int step = k % nums.length;
+		System.out.println("STEP: " + step);
 		int[] tmp = new int[step];
 		for (int i = 0; i < step; i++) {
 			tmp[i] = nums[nums.length - step + i];
+			System.out.println("tmp: " + tmp[i]);
 		}
 		for (int i = nums.length - step - 1; i >= 0; i--) {
+			System.out.println("NUM i:" + nums[i]);
 			nums[i + step] = nums[i];
+			System.out.println("nums i+step:" + nums[i + step]);
 		}
 		for (int i = 0; i < step; i++) {
 			nums[i] = tmp[i];
@@ -60,6 +64,7 @@ public class RotateArray {
 		int k = 3;
 		rotateArray(arr,k);
 		System.out.println(Arrays.toString(arr));
+		System.out.println("-------------------------");
 		
 		int[] arr1 = {1,2,3,4,5,6,7};
 		rotate_2(arr1, k);
