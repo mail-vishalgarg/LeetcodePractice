@@ -2,6 +2,7 @@ package Tree;
 
 import Tree.Node;
 //Node class imported from Tree.node class
+
 public class BinarySearchTree {
 	Node root;
 	
