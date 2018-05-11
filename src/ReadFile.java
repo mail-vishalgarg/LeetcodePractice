@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ReadFile {
-	private static final String FILENAME="C:\\Users\\vishgarg.ORADEV\\eclipse-workspace\\VishalLeetCode\\test.txt";
+	private static final String FILENAME="test.txt";
 	public static void main(String[] args) throws IOException{
 		FileReader fileReader;
 		try {
