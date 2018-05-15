@@ -14,7 +14,7 @@ public class ReplaceStringNewWithOld {
 		StringBuilder sb2 = new StringBuilder();
 		String replacedString = "";
 		
-		//get the string from begining to the old string
+		//get the string from beginning to the old string
 		for (int i =0; i<oldStrIndex; i++){
 			sb.append(inputStr.charAt(i));
 		}
